@@ -13,7 +13,7 @@ export const identifyCustomer = async (req: Request, res: Response): Promise<voi
     const result = await handleIdentify(email, phoneNumber);
     res.status(200).json(result);
   } catch (error) {
-    console.error("Error in identify:", error);
+    console.error("Identify error:", error);
     res.status(500).json({ error: "Internal Server Error" });
   }
 };
